@@ -1,0 +1,10 @@
+import type { SelectQueryBuilder } from "../../query-builder/SelectQueryBuilder";
+/**
+ * Special decorator used to extract relation id into separate entity property.
+ *
+ * @param relation
+ * @param alias
+ * @param queryBuilderFactory
+ * @experimental
+ */
+export declare function RelationId<T>(relation: string | ((object: T) => any), alias?: string, queryBuilderFactory?: (qb: SelectQueryBuilder<any>) => SelectQueryBuilder<any>): PropertyDecorator;

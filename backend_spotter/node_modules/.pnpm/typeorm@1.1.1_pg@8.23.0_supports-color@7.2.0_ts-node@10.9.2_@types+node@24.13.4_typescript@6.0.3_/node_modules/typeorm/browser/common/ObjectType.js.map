@@ -1,0 +1,1 @@
+{"version":3,"file":"ObjectType.js","sourceRoot":"../build/browser/src/","sources":["common/ObjectType.ts"],"names":[],"mappings":"","sourcesContent":["/**\n * Represents some Type of the Object.\n */\nexport type ObjectType<T> = { new (): T } | Function\n"]}

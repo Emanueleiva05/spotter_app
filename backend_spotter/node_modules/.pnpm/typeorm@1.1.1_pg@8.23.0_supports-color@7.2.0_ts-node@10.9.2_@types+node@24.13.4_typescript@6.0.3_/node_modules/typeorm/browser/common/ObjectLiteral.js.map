@@ -1,0 +1,1 @@
+{"version":3,"file":"ObjectLiteral.js","sourceRoot":"../build/browser/src/","sources":["common/ObjectLiteral.ts"],"names":[],"mappings":"","sourcesContent":["/**\n * Interface of the simple literal object with any string keys.\n */\nexport interface ObjectLiteral {\n    [key: string]: any\n}\n"]}

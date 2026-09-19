@@ -1,0 +1,1 @@
+{"version":3,"file":"ReturningType.js","sourceRoot":"","sources":["../../../../src/driver/types/ReturningType.ts"],"names":[],"mappings":"","sourcesContent":["export type ReturningType = \"insert\" | \"update\" | \"delete\"\n"]}

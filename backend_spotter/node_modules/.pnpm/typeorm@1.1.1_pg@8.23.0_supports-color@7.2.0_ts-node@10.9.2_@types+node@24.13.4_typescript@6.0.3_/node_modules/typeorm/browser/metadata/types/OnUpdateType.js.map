@@ -1,0 +1,1 @@
+{"version":3,"file":"OnUpdateType.js","sourceRoot":"../build/browser/src/","sources":["metadata/types/OnUpdateType.ts"],"names":[],"mappings":"","sourcesContent":["/**\n * ON_UPDATE type to be used to specify update strategy when some relation is being updated.\n */\nexport type OnUpdateType =\n    \"RESTRICT\" | \"CASCADE\" | \"SET NULL\" | \"DEFAULT\" | \"NO ACTION\"\n"]}

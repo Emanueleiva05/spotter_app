@@ -1,0 +1,10 @@
+import { FindOperator } from "../FindOperator";
+/**
+ * FindOptions Operator.
+ *
+ * @example
+ * { someField: JsonContains({...}) }
+ *
+ * @param value
+ */
+export declare function JsonContains<T extends Record<string | number | symbol, unknown> | readonly unknown[]>(value: T | FindOperator<T>): FindOperator<any>;
