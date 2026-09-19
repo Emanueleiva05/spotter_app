@@ -10,6 +10,7 @@ import {
 import { Dia } from './dia.entity.js';
 import { Ejercicio } from './ejercicio.entity.js';
 import { RegistroEntrenamiento } from './registroEntrenamiento.entity.js';
+import { HistorialPlanificacion } from './historialPlanificacionDia.entity.js';
 
 @Entity({ name: 'planificaciones_dias' })
 export class PlanificacionDia {
@@ -47,4 +48,7 @@ export class PlanificacionDia {
     (registro) => registro.planificacionDia,
   )
   registrosEntrenamiento: Relation<RegistroEntrenamiento[]>;
+
+  @OneToMany(() => HistorialPlanificacion, (his) => his.planificacionDia)
+  historiales: Relation<HistorialPlanificacion[]>;
 }

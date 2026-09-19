@@ -3,18 +3,18 @@ import {
   Column,
   PrimaryGeneratedColumn,
   OneToMany,
-  Relation,
+  type Relation,
 } from 'typeorm';
 import { RolUsuario } from './rolUsuario.entity.js';
 
 @Entity({ name: 'roles' })
 export class Rol {
-  @PrimaryGeneratedColumn()
+  @PrimaryGeneratedColumn({ name: 'idRol' })
   idRol: number;
 
-  @Column()
+  @Column({ unique: true })
   nombre: string;
 
   @OneToMany(() => RolUsuario, (rolUsuario) => rolUsuario.rol)
-  rolUsuario: Relation<RolUsuario>[];
+  rolUsuario: Relation<RolUsuario[]>;
 }

@@ -21,6 +21,7 @@ import { RegistroEntrenamiento } from './entities/registroEntrenamiento.entity.j
 import { PlanificacionDia } from './entities/planificacionDia.entity.js';
 import { Plan } from './entities/plan.entity.js';
 import { Contrato } from './entities/contrato.entity.js';
+import { HistorialPlanificacion } from './entities/historialPlanificacionDia.entity.js';
 export const { ObserveModule, ObserveInstrument } = createObserveModule();
 let AppModule = class AppModule {
 };
@@ -57,6 +58,7 @@ AppModule = __decorate([
                             PlanificacionDia,
                             Plan,
                             Contrato,
+                            HistorialPlanificacion,
                         ],
                         autoLoadEntities: true,
                         synchronize: true,

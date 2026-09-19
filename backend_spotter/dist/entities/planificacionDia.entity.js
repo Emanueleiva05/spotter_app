@@ -11,6 +11,7 @@ import { Entity, Column, PrimaryGeneratedColumn, ManyToOne, JoinColumn, OneToMan
 import { Dia } from './dia.entity.js';
 import { Ejercicio } from './ejercicio.entity.js';
 import { RegistroEntrenamiento } from './registroEntrenamiento.entity.js';
+import { HistorialPlanificacion } from './historialPlanificacionDia.entity.js';
 let PlanificacionDia = class PlanificacionDia {
     idPlanificacionDia;
     peso;
@@ -22,6 +23,7 @@ let PlanificacionDia = class PlanificacionDia {
     dia;
     ejercicio;
     registrosEntrenamiento;
+    historiales;
 };
 __decorate([
     PrimaryGeneratedColumn({ name: 'idPlanificacionDia' }),
@@ -65,6 +67,10 @@ __decorate([
     OneToMany(() => RegistroEntrenamiento, (registro) => registro.planificacionDia),
     __metadata("design:type", Object)
 ], PlanificacionDia.prototype, "registrosEntrenamiento", void 0);
+__decorate([
+    OneToMany(() => HistorialPlanificacion, (his) => his.planificacionDia),
+    __metadata("design:type", Object)
+], PlanificacionDia.prototype, "historiales", void 0);
 PlanificacionDia = __decorate([
     Entity({ name: 'planificaciones_dias' })
 ], PlanificacionDia);

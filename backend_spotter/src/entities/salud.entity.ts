@@ -3,18 +3,23 @@ import {
   Column,
   PrimaryGeneratedColumn,
   ManyToOne,
+  JoinColumn,
   type Relation,
 } from 'typeorm';
 import { Usuario } from './usuario.entity.js';
 
 @Entity({ name: 'salud' })
 export class Salud {
-  @PrimaryGeneratedColumn()
+  @PrimaryGeneratedColumn({ name: 'idSalud' })
   idSalud: number;
 
   @Column()
   nombre: string;
 
-  @ManyToOne(() => Usuario, (usuario) => usuario.salud)
+  @Column({ name: 'idUsuario' })
+  idUsuario: number;
+
+  @ManyToOne(() => Usuario, (usuario) => usuario.registrosSalud)
+  @JoinColumn({ name: 'idUsuario' })
   usuario: Relation<Usuario>;
 }

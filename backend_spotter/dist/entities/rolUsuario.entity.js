@@ -7,24 +7,38 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { Entity, PrimaryGeneratedColumn, ManyToOne, } from 'typeorm';
+import { Entity, PrimaryGeneratedColumn, Column, ManyToOne, JoinColumn, } from 'typeorm';
 import { Rol } from './rol.entity.js';
 import { Usuario } from './usuario.entity.js';
 let RolUsuario = class RolUsuario {
     idRolUsuario;
+    idRol;
+    idUsuario;
     rol;
     usuario;
 };
 __decorate([
-    PrimaryGeneratedColumn(),
+    PrimaryGeneratedColumn({ name: 'idRolUsuario' }),
     __metadata("design:type", Number)
 ], RolUsuario.prototype, "idRolUsuario", void 0);
 __decorate([
-    ManyToOne(() => Rol, (rol) => rol.rolUsuario),
+    Column({ name: 'idRol' }),
+    __metadata("design:type", Number)
+], RolUsuario.prototype, "idRol", void 0);
+__decorate([
+    Column({ name: 'idUsuario' }),
+    __metadata("design:type", Number)
+], RolUsuario.prototype, "idUsuario", void 0);
+__decorate([
+    ManyToOne(() => Rol, (rol) => rol.rolUsuario, { onDelete: 'CASCADE' }),
+    JoinColumn({ name: 'idRol' }),
     __metadata("design:type", Object)
 ], RolUsuario.prototype, "rol", void 0);
 __decorate([
-    ManyToOne(() => Usuario, (usuario) => usuario.rolUsuario),
+    ManyToOne(() => Usuario, (usuario) => usuario.rolUsuario, {
+        onDelete: 'CASCADE',
+    }),
+    JoinColumn({ name: 'idUsuario' }),
     __metadata("design:type", Object)
 ], RolUsuario.prototype, "usuario", void 0);
 RolUsuario = __decorate([

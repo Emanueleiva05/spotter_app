@@ -2,6 +2,7 @@ import { type Relation } from 'typeorm';
 import { Dia } from './dia.entity.js';
 import { Ejercicio } from './ejercicio.entity.js';
 import { RegistroEntrenamiento } from './registroEntrenamiento.entity.js';
+import { HistorialPlanificacion } from './historialPlanificacionDia.entity.js';
 export declare class PlanificacionDia {
     idPlanificacionDia: number;
     peso?: number;
@@ -13,4 +14,5 @@ export declare class PlanificacionDia {
     dia: Relation<Dia>;
     ejercicio: Relation<Ejercicio>;
     registrosEntrenamiento: Relation<RegistroEntrenamiento[]>;
+    historiales: Relation<HistorialPlanificacion[]>;
 }

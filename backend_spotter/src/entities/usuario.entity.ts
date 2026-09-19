@@ -50,10 +50,10 @@ export class Usuario {
   altura?: number;
 
   @Column({ type: 'date', nullable: true, name: 'fechaNacimiento' })
-  fechaNacimiento?: Date;
+  fechaNacimiento?: string;
 
   @OneToMany(() => Salud, (salud) => salud.usuario)
-  salud: Relation<Salud[]>;
+  registrosSalud: Relation<Salud[]>;
 
   @OneToMany(() => RolUsuario, (rolUsuario) => rolUsuario.usuario)
   rolUsuario: Relation<RolUsuario[]>;

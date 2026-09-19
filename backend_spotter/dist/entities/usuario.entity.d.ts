@@ -19,8 +19,8 @@ export declare class Usuario {
     imagen?: string;
     peso?: number;
     altura?: number;
-    fechaNacimiento?: Date;
-    salud: Relation<Salud[]>;
+    fechaNacimiento?: string;
+    registrosSalud: Relation<Salud[]>;
     rolUsuario: Relation<RolUsuario[]>;
     contratosComoCliente: Relation<Contrato[]>;
     planesComoProfesor: Relation<Plan[]>;

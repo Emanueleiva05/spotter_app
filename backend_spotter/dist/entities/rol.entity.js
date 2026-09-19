@@ -15,16 +15,16 @@ let Rol = class Rol {
     rolUsuario;
 };
 __decorate([
-    PrimaryGeneratedColumn(),
+    PrimaryGeneratedColumn({ name: 'idRol' }),
     __metadata("design:type", Number)
 ], Rol.prototype, "idRol", void 0);
 __decorate([
-    Column(),
+    Column({ unique: true }),
     __metadata("design:type", String)
 ], Rol.prototype, "nombre", void 0);
 __decorate([
     OneToMany(() => RolUsuario, (rolUsuario) => rolUsuario.rol),
-    __metadata("design:type", Array)
+    __metadata("design:type", Object)
 ], Rol.prototype, "rolUsuario", void 0);
 Rol = __decorate([
     Entity({ name: 'roles' })

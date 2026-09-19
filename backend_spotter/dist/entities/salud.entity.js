@@ -7,15 +7,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { Entity, Column, PrimaryGeneratedColumn, ManyToOne, } from 'typeorm';
+import { Entity, Column, PrimaryGeneratedColumn, ManyToOne, JoinColumn, } from 'typeorm';
 import { Usuario } from './usuario.entity.js';
 let Salud = class Salud {
     idSalud;
     nombre;
+    idUsuario;
     usuario;
 };
 __decorate([
-    PrimaryGeneratedColumn(),
+    PrimaryGeneratedColumn({ name: 'idSalud' }),
     __metadata("design:type", Number)
 ], Salud.prototype, "idSalud", void 0);
 __decorate([
@@ -23,7 +24,12 @@ __decorate([
     __metadata("design:type", String)
 ], Salud.prototype, "nombre", void 0);
 __decorate([
-    ManyToOne(() => Usuario, (usuario) => usuario.salud),
+    Column({ name: 'idUsuario' }),
+    __metadata("design:type", Number)
+], Salud.prototype, "idUsuario", void 0);
+__decorate([
+    ManyToOne(() => Usuario, (usuario) => usuario.registrosSalud),
+    JoinColumn({ name: 'idUsuario' }),
     __metadata("design:type", Object)
 ], Salud.prototype, "usuario", void 0);
 Salud = __decorate([

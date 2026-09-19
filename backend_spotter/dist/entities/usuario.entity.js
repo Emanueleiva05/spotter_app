@@ -30,7 +30,7 @@ let Usuario = class Usuario {
     peso;
     altura;
     fechaNacimiento;
-    salud;
+    registrosSalud;
     rolUsuario;
     contratosComoCliente;
     planesComoProfesor;
@@ -77,12 +77,12 @@ __decorate([
 ], Usuario.prototype, "altura", void 0);
 __decorate([
     Column({ type: 'date', nullable: true, name: 'fechaNacimiento' }),
-    __metadata("design:type", Date)
+    __metadata("design:type", String)
 ], Usuario.prototype, "fechaNacimiento", void 0);
 __decorate([
     OneToMany(() => Salud, (salud) => salud.usuario),
     __metadata("design:type", Object)
-], Usuario.prototype, "salud", void 0);
+], Usuario.prototype, "registrosSalud", void 0);
 __decorate([
     OneToMany(() => RolUsuario, (rolUsuario) => rolUsuario.usuario),
     __metadata("design:type", Object)
