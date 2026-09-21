@@ -1,1 +1,0 @@
-{"version":3,"file":"ReplicationMode.js","sourceRoot":"../build/browser/src/","sources":["driver/types/ReplicationMode.ts"],"names":[],"mappings":"","sourcesContent":["export type ReplicationMode = \"master\" | \"slave\"\n"]}

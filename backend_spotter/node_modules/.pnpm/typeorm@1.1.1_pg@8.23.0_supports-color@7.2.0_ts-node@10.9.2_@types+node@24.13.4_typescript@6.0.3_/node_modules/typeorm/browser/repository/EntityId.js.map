@@ -1,1 +1,0 @@
-{"version":3,"file":"EntityId.js","sourceRoot":"../build/browser/src/","sources":["repository/EntityId.ts"],"names":[],"mappings":"","sourcesContent":["import type { ObjectId } from \"../driver/mongodb/typings\"\n\nexport type EntityId = string | number | Date | ObjectId\n"]}

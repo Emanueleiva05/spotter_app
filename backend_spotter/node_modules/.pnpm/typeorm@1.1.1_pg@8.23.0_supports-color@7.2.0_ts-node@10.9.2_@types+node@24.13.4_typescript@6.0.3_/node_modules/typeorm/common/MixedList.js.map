@@ -1,1 +1,0 @@
-{"version":3,"file":"MixedList.js","sourceRoot":"","sources":["../../../src/common/MixedList.ts"],"names":[],"mappings":"","sourcesContent":["/**\n * List of T-s passed as an array or object map.\n *\n * Example usage: entities as an array of imported using import * as syntax.\n */\nexport type MixedList<T> = T[] | { [key: string]: T }\n"]}

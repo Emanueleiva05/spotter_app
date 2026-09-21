@@ -1,1 +1,0 @@
-{"version":3,"file":"TableIndexTypes.js","sourceRoot":"../build/browser/src/","sources":["schema-builder/options/TableIndexTypes.ts"],"names":[],"mappings":"","sourcesContent":["export type TableIndexTypes =\n    | \"btree\" // Postgres\n    | \"hash\" // Postgres\n    | \"gist\" // Postgres\n    | \"spgist\" // Postgres\n    | \"gin\" // Postgres\n    | \"brin\" // Postgres\n"]}

@@ -1,1 +1,0 @@
-{"version":3,"file":"TreeTypes.js","sourceRoot":"","sources":["../../../../src/metadata/types/TreeTypes.ts"],"names":[],"mappings":"","sourcesContent":["/**\n * Tree type.\n * Specifies what table pattern will be used for the tree entity.\n */\nexport type TreeType =\n    \"adjacency-list\" | \"closure-table\" | \"nested-set\" | \"materialized-path\"\n"]}

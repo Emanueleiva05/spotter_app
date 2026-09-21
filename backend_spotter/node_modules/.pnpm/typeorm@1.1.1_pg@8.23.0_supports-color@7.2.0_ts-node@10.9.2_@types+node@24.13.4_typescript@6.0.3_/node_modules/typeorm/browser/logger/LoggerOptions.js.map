@@ -1,1 +1,0 @@
-{"version":3,"file":"LoggerOptions.js","sourceRoot":"../build/browser/src/","sources":["logger/LoggerOptions.ts"],"names":[],"mappings":"","sourcesContent":["import type { LogLevel } from \"./Logger\"\n\n/**\n * Logging options.\n */\nexport type LoggerOptions = boolean | \"all\" | LogLevel[]\n"]}
