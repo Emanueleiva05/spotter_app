@@ -6,6 +6,7 @@ import {
   type Relation,
 } from 'typeorm';
 import { PlanificacionDia } from './planificacionDia.entity.js';
+import { GrupoMuscular } from './grupoMuscular.entity.js';
 
 @Entity({ name: 'ejercicios' })
 export class Ejercicio {
@@ -26,4 +27,7 @@ export class Ejercicio {
 
   @OneToMany(() => PlanificacionDia, (planificacion) => planificacion.ejercicio)
   planificaciones: Relation<PlanificacionDia[]>;
+
+  @OneToMany(() => GrupoMuscular, (grupo) => grupo.ejercicios)
+  grupos: Relation<GrupoMuscular[]>;
 }

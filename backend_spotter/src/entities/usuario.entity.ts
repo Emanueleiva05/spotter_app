@@ -11,12 +11,6 @@ import { Contrato } from './contrato.entity.js';
 import { Plan } from './plan.entity.js';
 import { RegistroEntrenamiento } from './registroEntrenamiento.entity.js';
 
-export enum Sexo {
-  FEMENINO = 'femenino',
-  MASCULINO = 'masculino',
-  PREFIERO_NO_DECIRLO = 'prefiero no decirlo',
-}
-
 @Entity({ name: 'usuarios' })
 export class Usuario {
   @PrimaryGeneratedColumn({ name: 'idUsuario' })
@@ -34,20 +28,8 @@ export class Usuario {
   @Column()
   password: string;
 
-  @Column({
-    type: 'enum',
-    enum: Sexo,
-  })
-  sexo: Sexo;
-
   @Column({ nullable: true })
   imagen?: string;
-
-  @Column({ nullable: true, type: 'float' })
-  peso?: number;
-
-  @Column({ nullable: true, type: 'float' })
-  altura?: number;
 
   @Column({ type: 'date', nullable: true, name: 'fechaNacimiento' })
   fechaNacimiento?: string;

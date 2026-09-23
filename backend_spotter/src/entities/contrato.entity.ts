@@ -37,6 +37,9 @@ export class Contrato {
   })
   estado: EstadoContrato;
 
+  @Column({ nullable: true })
+  comentarioAlumno?: string;
+
   @ManyToOne(() => Plan, (plan) => plan.contratos)
   @JoinColumn({ name: 'idPlan' })
   plan: Relation<Plan>;
